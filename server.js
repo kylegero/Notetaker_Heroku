@@ -3,7 +3,7 @@ var path = require("path");
 var fs = require("fs");
 var app = express();
 
-var PORT = process.env || 3030;
+var PORT = process.env.PORT || 3040;
 
 var theNotes = [];
 
@@ -72,5 +72,5 @@ app.get("/api/notes", function(req, res) {
   });
 
 app.listen(PORT, function() {
-    console.log("We're ready to go!  Head to localhost:" + PORT);
+    console.log("We're ready to go! Head to localhost:" + PORT);
   });
